@@ -1,0 +1,3 @@
+# 只看train_res50_fpn.py就行了
+# 最终选出来的模型input是fpn_input，result是results_fpn,只看这两个就行了，效果最好
+# 跑了四个模型+2个2超参数，最后的权重是resNetFPN-model-24.pth

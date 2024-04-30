@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1728</width>
+    <height>972</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>楷体</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>植物的识别提取系统</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/newPrefix/images_test/result.png</normaloff>:/newPrefix/images_test/result.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="plainTextEdit_result_display">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>150</y>
+      <width>161</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="lineWidth">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="input_img">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>150</y>
+      <width>400</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>输入图像</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="output_img">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>150</y>
+      <width>400</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>输出图像</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>940</y>
+      <width>1701</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>楷体</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>植物的识别提取系统</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="background">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>121</y>
+      <width>1181</width>
+      <height>471</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>60</y>
+      <width>1131</width>
+      <height>47</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="toolButton_modelselect">
+       <property name="minimumSize">
+        <size>
+         <width>45</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-image: url(:/newPrefix/images_test/model_select.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/folder_web.png</normaloff>:/newPrefix/images_test/folder_web.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="model_select">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <item>
+        <property name="text">
+         <string>模型选择</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>DeepLab v3</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_filelabel">
+       <property name="minimumSize">
+        <size>
+         <width>45</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-image: url(:/newPrefix/images_test/model_select.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/folder_web.png</normaloff>:/newPrefix/images_test/folder_web.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_openfile">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>照片识别</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_videolabel">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-image: url(:/newPrefix/images_ui/save.png);
+border-color: rgb(0, 170, 255);
+color:rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/author.png</normaloff>:/newPrefix/images_test/author.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>39</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_openvideo">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>视频识别</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_cameralabel">
+       <property name="minimumSize">
+        <size>
+         <width>45</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-color: rgb(0, 170, 255);
+color:rgb(0, 170, 255);
+border-image: url(:/newPrefix/images_test/camera.png);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/g1.png</normaloff>:/newPrefix/images_test/g1.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>39</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_opencamera">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>实时监测</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_saveimglabel">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-image: url(:/newPrefix/images_ui/versions.png);
+border-color: rgb(0, 170, 255);
+color:rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/settings.png</normaloff>:/newPrefix/images_test/settings.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>39</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_saveimg">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>保存图片</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="toolButton_savetxtlabel">
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: transparent;
+border-image: url(:/newPrefix/images_ui/versions.png);
+border-color: rgb(0, 170, 255);
+color:rgb(0, 170, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>:/newPrefix/images_test/settings.png</normaloff>:/newPrefix/images_test/settings.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>50</width>
+         <height>39</height>
+        </size>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="button_savetxt">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>保存文本</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1080</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="min">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="max">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="quit">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionGoogle_Translate">
+   <property name="text">
+    <string>Google Translate</string>
+   </property>
+  </action>
+  <action name="actionHTML_type">
+   <property name="text">
+    <string>HTML type</string>
+   </property>
+  </action>
+  <action name="actionsoftware_version">
+   <property name="text">
+    <string>software version</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

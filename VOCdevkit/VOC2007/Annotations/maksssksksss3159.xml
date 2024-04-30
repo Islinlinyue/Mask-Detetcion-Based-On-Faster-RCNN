@@ -1,0 +1,21 @@
+<annotation>
+		<folder>JPEGImages</folder>
+		<filename>maksssksksssmaksssksksss3159.jpg</filename>
+		<size>
+			   <width>334</width>
+			   <height>464</height>
+			   <depth>3</depth>
+		</size>
+		<object>
+			   <name>mask</name>
+			   <pose>Unspecified</pose>
+			   <truncated>0</truncated>
+			   <difficult>0</difficult>
+			   <bndbox>
+				     <xmin>54</xmin>
+				     <ymin>128</ymin>
+				     <xmax>291</xmax>
+				     <ymax>428</ymax>
+			   </bndbox>
+		</object>
+	</annotation>

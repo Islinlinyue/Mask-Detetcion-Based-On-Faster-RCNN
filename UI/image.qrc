@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>images_test/back.jpg</file>
+    <file>images_test/background.jpg</file>
+    <file>images_test/camera.png</file>
+    <file>images_test/dir.png</file>
+    <file>images_test/file.png</file>
+    <file>images_test/icon.png</file>
+    <file>images_test/ini-image.png</file>
+    <file>images_test/light.png</file>
+    <file>images_test/save.png</file>
+  </qresource>
+</RCC>
